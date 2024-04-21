@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Hepatitis Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the presence of Hepatitis-b
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+
+
+          <div class="input-field col s4">
+            <label for="age"><b>Age</b></label>
+            <br>
+          <input name="Age" id="age" type="number" placeholder="Age in years" class="validate">
+        </div>
+
+        <div class="input-field col s4">
+          <label for="sex"><b>Sex</b></label>
+            <br>
+          <input id="sex" name="Sex" type="text" placeholder="Male/Female" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="steroid"><b>Steroid</b></label>
+            <br>
+          <input id="steroid" name="Steroid" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="antivirals"><b>Antivirals</b></label>
+            <br>
+          <input id="antivirals" name="Antivirals" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="fatigue"><b>Fatigue</b></label>
+            <br>
+          <input id="fatigue" name="Fatigue" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="malaise"><b>Malaise</b></label>
+            <br>
+          <input id="malaise" name="Malaise" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="anorexia"><b>Anorexia</b></label>
+            <br>
+          <input id="anorexia" name="Anorexia" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="liver_big"><b>Liver Big</b></label>
+            <br>
+          <input id="liver_big" name="Liver_Big" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="liver_firm"><b>Liver Firm</b></label>
+            <br>
+          <input id="liver_firm" name="Liver_Firm" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="spleen_palpable"><b>Spleen Palpable</b></label>
+            <br>
+          <input id="spleen_palpable" name="Spleen_Palpable" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="spiders"><b>Spiders</b></label>
+            <br>
+          <input id="spiders" name="Spiders" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="ascites"><b>Ascites</b></label>
+            <br>
+          <input id="ascites" name="Ascites" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="varices"><b>Varices</b></label>
+            <br>
+          <input id="varices" name="Varices" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="alk_phosphate"><b>Alk Phosphate</b></label>
+            <br>
+          <input id="alk_phosphate" name="Alk_Phosphate" type="text" placeholder="Units of Alk Phosphate" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="sgot"><b>SGOT</b></label>
+            <br>
+          <input id="sgot" name="Sgot" type="text" placeholder="Units of SGOT" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="albumin"><b>Albumin</b></label>
+            <br>
+          <input id="albumin" name="Albumin" type="text" placeholder="Units of Albumin" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+          <label for="histology"><b>Histology</b></label>
+            <br>
+          <input id="histology" name="Histology" type="text" placeholder="Yes/No" class="validate">
+        </div>
+
+
+
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
